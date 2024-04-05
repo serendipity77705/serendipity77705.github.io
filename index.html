@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--head portion of code, with charset, title and favicon-->
+<head>
+    <meta charset="UTF-8">
+    <link rel="ICON"
+            href="broom.jpeg">
+    <title>Malk Daboor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="change">
+    <!--navigation structure-->
+        <nav>
+            <!-- <p>where do you want to go?</p><br> -->
+            <a href="" class="nav">Home Page</a>
+            <a href="project-1.html" class="nav">Project 1</a>
+            <a href="project-2.html" class="nav">Project 2</a>
+            <a href="#contact" class="nav">Contact Me</a>
+        </nav>
+    <hr>
+    <br>
+    <div id="style">
+        <p>choose a style!</p>
+        <button class="dark-mode" onclick="darkMode()">dark mode</button>
+        <!-- <button class="light-mode" onclick="lightMode()">light mode</button> -->
+        <button class="pink-mode" onclick="pinkMode()">pink mode</button>
+    </div>
+    <center>
+        <h1>Welcome to my Website! My name is Malk Daboor and I am honored to have you here</h1>
+    </center>
+    <h4>I am a first-year computer science student studying at Dalhousie University. I hope you enjoy your time on this
+        website!</h4>
+        <!--audio file downloaded onto computer-->
+    <div id="sound-audio">
+        <audio id="audio-player" src="you-and-me-helland.mp3" controls loop alt="You and Me by Peder Helland"></audio>
+    </div>
+    <hr>
+    <div>
+        <h1>Skills I Have Developed</h1>
+        <!--unordered list here, no nesting-->
+        <ul>
+            <li>Planning and marketing programming projects</li>
+            <li>Team work and collaboration</li>
+            <li>Critical and "Programmer" thinking</li>
+            <li>Optimization of code for efficiency and speed</li>
+            <li>Design rules and planning</li>
+        </ul>
+    </div>
+
+    <hr>
+    <!--table with an unordered list in the right column, with a small nested list in it.-->
+    <h1>Work and Volunteer Experience</h1>
+    <div>
+        <table>
+            <tr>
+                <td>Winners Sales Associate</td>
+                <td>
+                    <ul>
+                        <li>Great customer service and communcations skills</li>
+                        <li>Dedicated and hard-working associate</li>
+                        <li>Eye for design and placement to increase stor efficiency</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>YMCA Day Camp Instructor</td>
+                <td>
+                    <ul>
+                        <li>Ability to work with chidlren of all age groups</li>
+                        <li>Planning fun and engaging activities</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Course Representative</td>
+                <td>
+                    <ul>
+                        <li>Coruse representative in Dalhousie University</li>
+                        <ul>
+                            <li>Representative for <a href="https://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&entitytype=CID&entitycode=CSCI+1300" target="_blank">CSCI 1300</a> in the Fall term of 2023/2024</li>
+                        </ul>
+                        <li>Communicated with professor about ways that he could make course more engaging for students.</li>
+                        <li>Worked alongside professor to make sure that any issues students were having were addressed and fixed so that we could all have a positive experience.</li>
+                    </ul>
+                </td>
+            </tr>
+            
+        </table>
+    </div>
+    <hr>
+    <!--here I link the other two HTML web pages to the index.html page, and the bridge is the photos that act as anchors.-->
+    <center>
+        <h2>Projects That I Worked On</h2>
+    </center>
+    <div class="container">
+        <div id="first-project" class="project">
+            <center>
+                <a href="project-1.html">
+                    <img src="Hackathon-win.jpeg" width="500px" title="image of win">
+                    <p>Shiftkey Labs 2024 Gen AI Hackathon Non-coding Stream First Place</p>
+                </a>
+            </center>
+        </div>
+        <div id="second-project" class="project">
+            <center>
+                <a href="project-2.html">
+                    <img src="project-2-image.png" width="500px" title="image of Processing game">
+                    <p>CSCI 1105 Arcade Game Project</p>
+                </a>
+            </center>
+        </div>
+    </div>
+</body>
+
+<hr>
+<!--footer of index.html, has external link to email-->
+<footer id="contact" class="change">
+    <h2>Want to talk more? Contact me!</h2>
+    <p>
+        E-mail: <a href="mailto:"malk.daboor@dal.ca">malk.daboor@dal.ca</a>
+        <br>LinkedIn: I do not have one yet, but am working on it!
+        <br>
+        Too lazy to send me an email or check my LinkedIn? Fair enough. Just fill out this form then:
+            <form id="form-info" action="#">
+                <div id="form">
+                <label for="first-name">First Name</label>
+                <br>
+                <input type="text" name="first-name" id="first-name">
+                <br><br>
+
+                <label for="last-name">Last Name</label>
+                <br>
+                <input type="text" name="last-name" id="last-name">
+                <br><br>
+
+                <label for="age">Age</label> 
+                <br>
+                <input type="number" name="age" id="age">
+                <br><br>
+
+                <label for="phone-number">Phone Number</label>
+                <br>
+                <input type="tel" name="phone-number" id="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx">
+                <br><br>
+
+                <label for="email">Email</label>
+                <br>
+                <input type="email" name="email" id="email">
+                <br><br>
+
+                <label for="radio">Do you know me?</label> <br>
+                <input type="radio" name="radio" id="radio">Yes</input>
+                <input type="radio" name="radio" id="">No</input>
+                <br><br>
+
+                <label for="connection">How do I know you?</label> <br>
+                <textarea name="connection" id="connection"  rows="20" cols="100"></textarea>
+                <br><br>
+
+                <label for="reason">Reason for contacting me</label>
+                <br>
+                <textarea id="reason" name="reason" rows="5" cols="100"></textarea>
+                <br><br>
+
+                <button id="submit">submit</button>
+                
+                <!-- <button id="submit" onclick="window.alert('Thank you for filling out this form! I will try to get back to you as soon as I can!')">Submit</button> -->
+                <!-- <p id="pressed"></p>  -->
+                <!-- <button onclick="document.getElementById("pressed").innerHTML = 'Thank you for filling out this form! I will try to get back to you as soon as I can!'">Submit</button> -->
+                <div id="warning"></div>
+                </div>
+            </form>
+    </p>
+    <script src="script.js"></script>
+</footer>
+
+</html>

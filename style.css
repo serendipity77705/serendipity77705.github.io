@@ -1,0 +1,285 @@
+body{
+    width: 100%;
+}
+/* using universal selector to change the color of p */
+* p{
+    color: #18191a;
+}
+/* using grid display for the navigation bar */
+nav{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: start;
+    text-align: center;
+    width: 100%;
+}
+/* using the :hover pseudo-class */
+.nav:hover{
+    background-color: #ffd500;
+}
+/* changing the color of the pages */
+body{
+    background-color: #faf9f6;
+}
+
+* a:visited {
+    color: peru;
+}
+/* styling URL's based on hover */
+* a:hover {
+    color: purple;
+}
+/* grid display */
+#projects{
+    display: grid; 
+    grid-template-columns: auto auto;
+    gap: 5px 10px;
+    background-color: aqua;
+    padding: 2px;
+    margin: 0px;
+    border: 0px;
+}
+    
+#sound-audio {
+    width: 100%;
+}
+/* child selector */
+#sound-audio > #audio-player{
+    width: 100%;
+    background-color: yellow;
+    filter:opacity(50%)
+}
+/* multiple selector */
+#second-project:hover, #first-project:hover{
+    filter: opacity(50%);
+    background-color: #f4c5c5;
+    
+}
+
+#first-project a:link, #second-project a:link{
+    color: white
+}
+
+#first-project a:hover p, #second-project a:hover p{
+    color: white;
+}
+
+td {
+    width: 50%;
+}
+/* using flex display */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.project{
+    background-color: beige;
+    margin: 5px;
+    padding: 7px;
+    border: 3px;
+    text-align: center;
+}
+/* using grid display */
+.container-grid{
+    display: grid;
+    width: 100vw;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    gap: 20px;
+}
+/* adjacent sibling selector */
+.container-grid h2 + p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* sibling selector */
+.challenge-grid p ~ ol{
+    font-family: 'Times New Roman', Times, serif;
+}
+/* padding, border and marign of image */
+#logo{
+    width: 90%;
+    margin: 15px;
+    padding: 3px;
+    border: 1px solid #f0f0f0f0;
+    margin: 10px;
+}
+
+.idea-grid{
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+/* implement grid areas */
+.grid-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "introduction introduction"
+        "implementation implementation"
+        "challenges well"
+        "video video";
+    height: 100vh;
+}
+
+.project-intro{
+    text-align: center;
+    grid-area: introduction;
+}
+
+.project-implement{
+    text-align: center;
+    grid-area: implementation;
+}
+
+.project-challenge{
+    grid-area: challenges;
+    margin: 10px;
+}
+
+.project-well{
+    grid-area: well;
+    margin: 10px;
+}
+
+.project-video{
+    grid-area: video;
+    padding: 20px;
+}
+/* stying the table */
+table{
+    border: 2px solid black;
+    width: 99%;
+    font-family: garamond;
+}
+table td, th{
+    border:2px solid black;
+    width: 50px;
+}
+table tr {
+    width: 150px;
+}
+/* using the attribute selector */
+[title~="image"]{
+    border: 30px solid white;
+    padding: 20px;
+    margin: 2px;
+}
+/* using the pseudo-element selector */
+*::selection{
+    background-color: #eed200;
+    color: #ce3311;
+}
+
+ul li::marker, ol li::marker {
+    color: peru;
+}
+
+.project{
+    transition: 0.5s;   
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* margin-top: 10px; */
+    margin: 10px 5px 10px 5px;
+  }
+
+/* media query for desktop computers */
+@media(min-width: 900px){
+    .project, .project img{
+        width:40vw;
+    }
+    body{
+        font-size: small;
+    }
+    #warning{
+        width:60vw;
+        height:5vh;
+        display:flex;
+        align-items: center;
+        font-size: small;
+    }
+  }
+  
+  /* media query for tablets */
+  @media(max-width: 900px) and (min-width: 600px){
+    .project, .project img{
+      width: 80vw;
+    }
+    body{
+        font-size: medium;
+    }
+    #warning{
+        width:95vw;
+        height:5vh;
+        display:flex;
+        align-items: center;
+        font-size: medium;
+    }
+  }
+  
+  /* media query for phones */
+  @media(max-width: 600px){
+    .project, .project img{
+      width: 85vw;
+    }
+    body{
+        font-size: large;
+    }
+    #warning{
+        width:95vw;
+        height:5vh;
+        display:flex;
+        align-items: center;
+        font-size: large;
+    }
+    
+  }
+
+  .dark-mode{
+    background-color:#18191a;
+    color: #faf9f6;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    ul li::marker, ol li::marker {
+        color: white;
+    }
+    *::selection{
+        background-color: white;
+        color: black;
+    }
+    * a:visited{
+        color: #eed200;
+    }
+    * a:hover{
+        color: azure;
+    }
+    * p{
+        color: white;
+    }
+
+  }
+
+  .pink-mode{
+    color: #ff0090;
+    background-color: #ffebeb;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    * p{
+        color: #ff0090;
+    }
+}
+
+/* #warning{
+    width:50vw;
+    height:5vh;
+    display:flex;
+    align-items: center;
+    font-size: medium;
+} */
