@@ -67,7 +67,7 @@ function pinkMode() {
 }
 
 
-//other event handler, uses mouseover
+//other event handler, uses mouseover, code influenced from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onmouseover_addeventlistener
 document.getElementById("hover").addEventListener("mouseover", over);
 document.getElementById("hover").addEventListener("mouseout", out);
 function over(){
