@@ -1,5 +1,7 @@
+// the notification
 window.alert("Please hire me :)");
 
+// event handler, using click of button
 function validateForm(){
     const submitButton = document.getElementById("submit");
     submitButton.addEventListener("click", function validate(event) {
@@ -16,7 +18,7 @@ function validateForm(){
 
         let pattern = /[0-9]{3}-[0-9]{3}-[0-9]{4}/;
         let present = pattern.test(phoneNumber);
-
+        //form validation
         if (!firstName || !lastName) {
             warning.style.backgroundColor = "red";
             warning.style.color = "white";
@@ -32,19 +34,13 @@ function validateForm(){
         } else if(!phoneNumber && !email){
             warning.style.backgroundColor = "red";
             warning.style.color = "white";
-            warning.innerHTML = "Please provide either your phone number, email or both."
-            if(phoneNumber && (phoneNumber.length < 10 || phoneNumber.length > 0 && present == false)) {
-                warning.style.backgroundColor = "red";
-                warning.style.color = "white";
-                warning.innerHTML = "Please provide a valid phone number.";
-                return false;
-            }
-        } /*else if (phoneNumber.length < 10 || phoneNumber.length > 0 && present == false) {
+            warning.innerHTML = "Please provide either your phone number, email or both.";
+        } else if (phoneNumber.length < 10 || phoneNumber.length > 0 && present == false) {
             warning.style.backgroundColor = "red";
             warning.style.color = "white";
             warning.innerHTML = "Please provide a valid phone number.";
             return false;
-        }*/ else if (!reason) {
+        } else if (!reason) {
             warning.style.backgroundColor = "red";
             warning.style.color = "white";
             warning.innerHTML = "Please tell me the reason that you contacted me.";
@@ -58,7 +54,7 @@ function validateForm(){
 
 validateForm();
 
-
+// toggling on and  off the different themes
 function darkMode() {
     const dark = document.body;
     dark.classList.toggle("dark-mode");
@@ -68,5 +64,17 @@ function darkMode() {
 function pinkMode() {
     const pink = document.body;
     pink.classList.toggle("pink-mode");
+}
+
+
+//other event handler, uses mouseover
+document.getElementById("hover").addEventListener("mouseover", over);
+document.getElementById("hover").addEventListener("mouseout", out);
+function over(){
+    document.getElementById("hover").style.color = "purple";
+}
+
+function out(){
+    document.getElementById("hover").style.color = "black";
 }
 
